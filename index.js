@@ -22,4 +22,6 @@ async function connectToDatabase() {
 connectToDatabase();
 
 // server create express
-app.listen(3000);
+app.listen(process.env.PORT, () => {
+  console.log(`server is running on port ${process.env.PORT}`);
+});
